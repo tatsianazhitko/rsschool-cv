@@ -25,6 +25,6 @@ Courses HTML/CSS, JavaScript, WebDevelopment by codeavengers.com.
   
 Courses Vue.js, React.js by codecademy.com.
 #### Education: 
-  2005-2010 Belarusian State University of Informatics and Radioelectronics, Faculty of Information Technology and Management, Artificial Intelligence.
+* 2005-2010 Belarusian State University of Informatics and Radioelectronics, Faculty of Information Technology and Management, Artificial Intelligence.
 #### English level: 
   A1
