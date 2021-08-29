@@ -1,0 +1,40 @@
+.paper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    border: 1px solid black;
+    float: center;
+}
+
+.sidebar {
+    width: 20%; 
+    min-width: 200px; 
+    height: 112vh; 
+    float: left; 
+    background-color: rgb(226, 236, 235);
+}
+
+.photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px; /* Радиус скругления */
+    border: 2px solid grey; /* Параметры рамки */
+}
+
+.person {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+}
+
+.person h1 {
+    margin-bottom: -5px;
+}
+
+.contacts {
+    line-height: 1;
+}
+.main {
+    padding-top: 30px;
+}
