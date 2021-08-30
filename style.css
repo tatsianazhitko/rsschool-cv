@@ -1,40 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Open+Sans:wght@300&display=swap');
+
+html {
+    background-color: #83848f;
+}
 .paper {
     margin-left: auto;
     margin-right: auto;
+    background-color: #f2f3fa;
+    color: #212121;
+    font-family: 'Open Sans', sans-serif;
     width: 800px;
-    border: 1px solid black;
+    height: 1000px;
     float: center;
+    box-shadow: 5px 10px 15px #333333; /* offset-x | offset-y | blur-radius | color */
 }
 
 .sidebar {
-    width: 20%; 
-    min-width: 200px; 
-    height: 112vh; 
+    width: 30%; 
+    height: 94%; 
+    margin-top: 4%;
     float: left; 
-    background-color: rgb(226, 236, 235);
+    border-right: 2px solid #83848f;
 }
 
 .photo {
     width: 150px;
     height: 150px;
-    border-radius: 75px; /* Радиус скругления */
-    border: 2px solid grey; /* Параметры рамки */
+    border-radius: 75px;
+    border: 2px solid #83848f;
 }
 
 .person {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 30px;
-    background-color: white;
+    font-family: 'Julius Sans One', sans-serif;
+
 }
 
 .person h1 {
-    margin-bottom: -5px;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
 
 .contacts {
-    line-height: 1;
+    font-size: 12px;
+    margin-top: 15% ;
+    margin-bottom: 15% ;
+    margin-left: 15% ;
 }
+
+.contacts i {
+    font-size: 18px;
+    color: #333333;
+}
+
 .main {
     padding-top: 30px;
+    margin-left: 34%;
+    margin-right: 4%;
+}
+
+.paragraph h2{
+    margin-top: 40px;
+    border-top: 1px solid #212121;
+    border-bottom: 1px solid #212121;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
 }
