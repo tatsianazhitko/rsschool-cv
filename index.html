@@ -3,31 +3,41 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b978ef6f90.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
+    <header>
+        <h1>
+            Tatsiana Zhitko VC
+        </h1>
+    </header>
     <div class="paper">
-
         <div class="content">
-            <header class="sidebar">
+            <div class="sidebar">
                 <section class="person">
-                    <img class="photo" src="image.jpg" alt="photo">
-                    <h1>Tatsiana Zhitko</h1>
+                    <img class="photo" src="assets/image.jpg" alt="photo">
+                    <h2>Tatsiana Zhitko</h2>
                     <span>web developer</span>
                 </section>
-                <address class="contacts">
-                    <p><i class="fas fa-phone-square-alt"></i> +375(44)7145095</p>
-                    <p><i class="fas fa-envelope-square"></i> tatsiana.zhitko@gmail.com</p>
-                    <p>
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/tatsiana-zhitko-79067a62/"> Tatsiana Zhitko</a>
-                    </p>
-                </address>
-            </header>
+                <div class="contacts">
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone-square-alt"></i> +375(44)7145095</li>
+                        <li><i class="fas fa-envelope-square"></i> tatsiana.zhitko@gmail.com</li>
+                        <li>
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/tatsiana-zhitko-79067a62/"> Tatsiana Zhitko</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <main class="main">
                 <div class="menu_container">
                     <div class="burger_menu_btn">
@@ -38,71 +48,120 @@
                             <li><a href="#profile" class="burger_menu_link">Profile</a></li>
                             <li><a href="#skills" class="burger_menu_link">Skills</a></li>
                             <li><a href="#code_examples" class="burger_menu_link">Code examples</a></li>
-                            <li><a href="#experience" class="burger_menu_link">Experience</a></li>
                             <li><a href="#education" class="burger_menu_link">Education</a></li>
-                            <li><a href="#english_level" class="burger_menu_link">English level</a></li>
+                            <li><a href="#experience" class="burger_menu_link">Experience</a></li>
                         </ul>
                     </nav>
                 </div>
                 <section class="paragraph" id="profile">
-                    <h2>Profile</h2>
+                    <h2>About Myself</h2>
                     <div class="paragraph-content">
-                        My goal is to start a Junior Web Developer career. My experience in software JavaEE development
-                        3 года. I have good analytical skills, learn quickly, work well in a team.
+                        Hello! I'm a Junior Web Developer. I've had Java EE development experience in the past. 
+                        Later in my career there was a break and there was a desire to learn something new.
+                        Now my goal is to get the specialty of a full-stack JavaScript developer.
                     </div>
                 </section>
                 <section class="paragraph" id="skills">
-                    <h2>Skills</h2>
+                    <h2>My Skills</h2>
                     <div class="paragraph-content">
-                        I have experience in Java development (frameworks Spring, JSF, Hibernate, Maven), databases
-                        Oracle and PostgreSQL. I used Jira, Mercurial, Jenkins, IDE Eclipse in my work.
+                        <ul class="slils_list">
+                            <li>OOP</li>
+                            <li>JavaEE (JSF, Security API)</li>
+                            <li>Spring Framework</li>
+                            <li>Hibernate</li>
+                            <li>DB (MySQL, PostgreSQL)</li>
+                            <li>Maven</li>
+                            <li>Jenkins</li>
+                            <li>English level: A1</li>
+                        </ul>
                     </div>
                 </section>
                 <section class="paragraph" id="code_examples">
                     <h2>Code examples:</h2>
                     <div class="paragraph-content">
-                        https://github.com/tatsianazhitko/revenous
-                    </div>
-                </section>
-                <section class="paragraph" id="experience">
-                    <h2>Experience</h2>
-                    <div class="paragraph-content">
-                        <h3>AGAT – Control Systems(2010-2013, 2015-2016)</h3>
-
-                        <h4>Projects:</h4>
-
-                        Unified information system for monitoring the execution of orders.
-                        Llferay portlets for corporate portal.
-                        A prototype of a war simulation system using Pitch pRTI and C++.
-                        Courses HTML/CSS, JavaScript, WebDevelopment by codeavengers.com.
-
-                        Courses Vue.js, React.js by codecademy.com.
-                    </div>
+                        <pre><code class="JavaScript"><span>function uncurry(f) {
+  console.log("uncurry: ", f);
+  return (...args) => {
+    if (typeof f !== "function" )  return f;                        
+    let fArgsLen = f.length;
+    let fArgs = args.slice(0, fArgsLen);
+    let f1 = f.apply(this, fArgs);
+    let newArgs = args.slice(fArgsLen);
+    return uncurry(f1)(...newArgs);
+  };
+}</span></code></pre>
+                       
+                </div>
                 </section>
                 <section class="paragraph" id="education">
                     <h2>Education</h2>
                     <div class="paragraph-content">
-                        2005-2010 Belarusian State University of Informatics and Radioelectronics, Faculty of
-                        Information Technology and Management, Artificial Intelligence.
+                        <i>2005-2010 </i> Belarusian State University of Informatics and Radioelectronics. Faculty of
+                        Information Technology and Control. Artificial Intelligence
                     </div>
+                    <h3>Courses: </h3>
+                    <ul>
+                        <li>codeavengers.com 'HTML/CSS'</li>
+                        <li>codeavengers.com 'JavaScript'</li>
+                        <li>codeavengers.com 'Web Development'</li>
+                        <li>codecademy.com 'Learn React.js'</li>
+                        <li>codecademy.com 'Learn Vue.js'</li>
+                    </ul>
                 </section>
-                <section class="paragraph" id="english_level">
-                    <h2>English level</h2>
+                <section class="paragraph" id="experience">
+                    <h2>Experience</h2>
                     <div class="paragraph-content">
-                        A1
+                        <i>2010-2013, 2015-2016 </i> OJSC 'AGAT – Control Systems'. Software engineer
+                        <ul>
+                            <li>Document management automation systems for government agencies</li>
+                            <li>A prototype of a war simulation system using Pitch pRTI</li>
+                        </ul>
+                        <h3>Projects:</h3>
+                        <div class="projects">
+                            <a class="project-card" href="https://github.com/zhitko/bitrix24report" target=" ">
+                                <figure>
+                                    <img src="assets/bitrix.jpeg" alt="project-img">
+                                    <figcaption>
+                                        <h4>Report for Bitrix24 (JavaScript, Vue.js)</h4>
+                                        Local Bitrix24 application for generating reports.
+                                    </figcaption>
+                                </figure>
+                            </a>
+                            <a class="project-card" href="https://github.com/tatsianazhitko/rsschool-cv" target=" ">
+                                <figure>
+                                    <img src="assets/cv.jpeg" alt="project-img">
+                                    <figcaption>
+                                        <h4>CV - study project (HTML, CSS)</h4>
+                                        My Curriculum vitae.
+                                    </figcaption>
+                                   </figure>
+                                
+                            </a>
+                            <a class="project-card" href="https://github.com/tatsianazhitko/museum" target=" ">
+                                <figure>
+                                    <img src="assets/museum.jpeg" alt="project-img">
+                                    <figcaption>
+                                        <h4>Museum - study project (HTML, SCSS, JavaScript)</h4>
+                                        Louvre landing page.
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
                     </div>
                 </section>
-
             </main>
         </div>
+    
         <footer>
             <a href="https://rs.school"><img src="logo.svg" alt="logo"></a>
-            <p>
-                © Zhitko Tatsiana <time>2021</time>
-            </p>
+            <div class="footer-date">
+                <a href="https://github.com/tatsianazhitko/rsschool-cv" target=" ">© Zhitko Tatsiana</a>
+                <time>2021</time>
+            </div>
         </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </div>
 </body>
 
 </html>
